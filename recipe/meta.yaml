@@ -1,5 +1,5 @@
 {% set name = "minimalmodbus" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5c55b1e26131e1f3b7fe55b950f8abb8a2396b77f73bc0a513cc3ef0051db526
+  sha256: cf873a2530be3f4b86467c3e4d47b5f69fd345d47451baca4adbf59e2ac36d00
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -31,7 +31,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Easy-to-use Modbus RTU and Modbus ASCII implementation for Python.'
+  summary: Easy-to-use Modbus RTU and Modbus ASCII implementation for Python.
   doc_url: https://minimalmodbus.readthedocs.io/
   dev_url: https://github.com/pyhys/minimalmodbus
 
